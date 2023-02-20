@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.NoteViewerActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolBarContainer"
+        android:layout_width="match_parent"
+        android:layout_height="71.50dp"
+        android:background="@color/color1"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backHomeArrowBtn"
+            android:layout_width="31.20dp"
+            android:layout_height="31.20dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="13dp"
+            android:contentDescription="back arrow"
+            android:src="@drawable/ic_back_round"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white" />
+
+
+        <TextView
+            android:id="@+id/noteLabelText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="6.50dp"
+            android:fontFamily="@font/open_sans_medium"
+            android:text="Secured Notes"
+            android:textColor="@color/white"
+            android:textSize="18.20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/backHomeArrowBtn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/editNoteBtn"
+            android:layout_width="31.20dp"
+            android:layout_height="31.20dp"
+            android:layout_marginEnd="13dp"
+            app:layout_constraintBottom_toBottomOf="@+id/lockIconImg"
+            app:layout_constraintEnd_toStartOf="@+id/lockIconImg"
+            app:layout_constraintTop_toTopOf="@+id/lockIconImg"
+            app:srcCompat="@drawable/ic_edit" />
+
+        <ImageView
+            android:id="@+id/lockIconImg"
+            android:layout_width="31.20dp"
+            android:layout_height="31.20dp"
+            android:layout_marginEnd="13dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="Secured Notes"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_lock_open"
+            app:tint="@color/white" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolBarContainer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/noteTitleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="6.50dp"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="Note Title"
+                android:textColor="#5A5A5A"
+                android:textSize="23sp" />
+
+            <TextView
+                android:id="@+id/noteText"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6.50dp"
+                android:layout_marginEnd="6.50dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginBottom="6.50dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:text="Secured Notes"
+                android:textSize="20.8sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

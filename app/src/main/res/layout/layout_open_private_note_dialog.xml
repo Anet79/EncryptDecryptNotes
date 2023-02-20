@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="13dp"
+        app:cardCornerRadius="6.50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10.40dp"
+                android:layout_marginTop="13dp"
+                android:text="Enter Your App Password"
+                android:textColor="@color/color1"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/passwordNoteEtBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10.40dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="13dp"
+                android:autofillHints="name"
+                android:background="@drawable/edittext_underline_bg"
+                android:hint="Enter Password"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:paddingTop="13dp"
+                android:paddingBottom="13dp"
+                android:singleLine="true"
+                android:textColorHint="@color/color1"
+                android:textSize="20.80sp"
+                app:layout_constraintEnd_toStartOf="@+id/showPasswordNoteBtn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+            <ImageView
+                android:id="@+id/showPasswordNoteBtn"
+                android:layout_width="31.20dp"
+                android:layout_height="31.20dp"
+                android:layout_marginEnd="13dp"
+                android:contentDescription="secure note"
+                app:layout_constraintBottom_toBottomOf="@+id/passwordNoteEtBox"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/passwordNoteEtBox"
+                app:srcCompat="@drawable/ic_eye_close"
+                app:tint="@color/color1" />
+
+            <Button
+                android:id="@+id/openNoteBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10.40dp"
+                android:layout_marginTop="19.50dp"
+                android:layout_marginEnd="10.40dp"
+                android:layout_marginBottom="13dp"
+                android:padding="13dp"
+                android:text="Open"
+                android:textAllCaps="false"
+                android:textSize="19.50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/passwordNoteEtBox" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="31.20dp"
+            android:layout_height="31.20dp"
+            android:layout_marginStart="10.40dp"
+            android:layout_marginTop="10.40dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="Secured Notes"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_secure_note_logo" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6.50dp"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="Secured Notes"
+            android:textColor="@color/color1"
+            android:textSize="18.20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+            app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+        <ImageView
+            android:id="@+id/settingsBtn"
+            android:layout_width="31.20dp"
+            android:layout_height="31.20dp"
+            android:layout_marginTop="10.40dp"
+            android:layout_marginEnd="13dp"
+            android:contentDescription="settings"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_setting"
+            app:tint="@color/color1" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="13dp"
+            android:background="@drawable/ic_search_box"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingStart="10.40dp"
+            android:paddingTop="6.50dp"
+            android:paddingEnd="10.40dp"
+            android:paddingBottom="6.50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+            <ImageView
+                android:layout_width="23.40dp"
+                android:layout_height="23.40dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="2.60dp"
+                android:layout_marginTop="1.30dp"
+                android:layout_marginBottom="1.30dp"
+                android:adjustViewBounds="true"
+
+                android:src="@drawable/ic_search" />
+
+            <EditText
+                android:id="@+id/searchNoteBox"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="6.50dp"
+                android:layout_weight="1"
+                android:autofillHints="name"
+                android:background="@android:color/transparent"
+                android:hint="Search here"
+                android:inputType="text"
+                android:textColor="@color/color1"
+                android:textColorHint="@color/black"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+
+                <ImageView
+                    android:id="@+id/filterNotesBtn"
+                    android:layout_width="32.5dp"
+                    android:layout_height="32.5dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="1.60dp"
+                    android:layout_marginEnd="2.60dp"
+                    android:layout_marginBottom="1.30dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_filter"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/color1" />
+
+                <ImageView
+                    android:id="@+id/notificationCircleIcon"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_notification_circle"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@id/filterNotesBtn"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/noteRecView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="6.50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addNoteBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2.80dp"
+        android:layout_marginBottom="26dp"
+        android:clickable="true"
+
+        android:focusable="true"
+        android:tint="@color/white"
+        android:backgroundTint="@color/color1"
+        app:borderWidth="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_add" />
+
+    <ImageView
+        android:id="@+id/noteNotFoundImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="130dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:srcCompat="@drawable/ic_note_empty" />
+
+    <TextView
+        android:id="@+id/noteNotFoundTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:fontFamily="@font/open_sans_medium"
+        android:text="No note found"
+        android:textSize="26sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/noteNotFoundImg"
+        app:layout_constraintStart_toStartOf="@+id/noteNotFoundImg"
+        app:layout_constraintTop_toBottomOf="@+id/noteNotFoundImg" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,38 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="Security">
+
+        <EditTextPreference
+            app:key="app_password"
+            app:title="App Password"
+            app:useSimpleSummaryProvider="true" />
+
+        <Preference
+            app:isPreferenceVisible="false"
+            app:key="change_app_password"
+            app:title="Change App Password" />
+
+        <ListPreference
+            app:defaultValue="0"
+            app:entries="@array/open_passwords_methods_entries"
+            app:entryValues="@array/open_passwords_methods_value"
+            app:key="password_method"
+            app:title="Open App From Password"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:isPreferenceVisible="false"
+            app:key="custom_password"
+            app:title="Custom Password"
+            app:useSimpleSummaryProvider="true" />
+
+        <Preference
+            app:isPreferenceVisible="false"
+            app:key="change_custom_password"
+            app:title="Change Custom Password" />
+
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>
